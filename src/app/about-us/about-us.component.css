@@ -1,0 +1,145 @@
+.about-container {
+  background: linear-gradient(to right, #f4f6f9 20%, #ffffff 100%);
+  font-family: 'Poppins', sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+@media (min-width: 992px) {
+  .about-container {
+    margin-left: 24px;
+  }
+}
+
+/* Title and Text */
+.about-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1;
+}
+.about-subtitle {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #000;
+}
+.about-tagline {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 1.25rem;
+}
+.about-description {
+  font-size: 0.95rem;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* Logo */
+.about-logo {
+  max-width: 75%;
+  height: auto;
+}
+
+/* Desktop cards in row with margin */
+.cards-container .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Info Cards */
+.info-card {
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 16px;
+  box-shadow: 2px 2px 0 #000;
+  transition: 0.3s ease;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 4px 4px 0 #000;
+}
+.info-title {
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+.info-text {
+  font-size: 0.93rem;
+  color: #333;
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 991.98px) {
+  .about-title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .about-subtitle,
+  .about-tagline,
+  .about-description {
+    text-align: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .about-logo {
+    margin-top: 2rem;
+    max-width: 68%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-title {
+    font-size: 2rem;
+    text-align: left;
+    padding-left: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .about-subtitle,
+  .about-tagline{
+    text-align: left;
+    padding-left: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+
+  .about-description {
+    text-align: center;
+    margin-top: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .about-logo {
+    margin-top: 2rem;
+    max-width: 64%;
+  }
+  .row.align-items-center {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  /* Stack cards vertically, center them */
+  .cards-container .row {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .info-card {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 1rem;
+    min-height: auto;
+    width: 100%;
+    max-width: 400px;
+  }
+  .info-title {
+    font-size: 1.07rem;
+  }
+  .info-text {
+    font-size: 0.97rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+  }
+}

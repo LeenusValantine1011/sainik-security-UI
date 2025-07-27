@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="assets/dashboard/cctv logo 1.svg" alt="Logo" class="logo-img">
+      </a>
+      <button class="btn d-lg-none" (click)="toggleMobileMenu()">
+          <i class="bi bi-list fs-2"></i>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav align-items-center gap-3 bg-white px-4 py-2 rounded-pill nav-links-box">
+          <li class="nav-item"><a class="nav-link px-2" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-2" routerLink="/about"  >About</a></li>
+          <li class="nav-item"><a class="nav-link px-2" routerLink="/services" >Service</a></li>
+          <li class="nav-item"><a class="nav-link px-2" routerLink="/products">Product</a></li>
+          <li class="nav-item"><a class="nav-link px-2" href="#">Contact</a></li>
+          <li class="nav-item">
+              <a class="btn number-div rounded-pill px-3" href="#">
+                <i class="bi bi-whatsapp"></i> +91 XXXXX XXXXX
+              </a>
+            </li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Mobile Sidenav -->
+<div class="mobile-menu" [class.open]="isMobileMenuOpen">
+  <div class="overlay" (click)="toggleMobileMenu()"></div>
+  <div class="menu-content bg-white p-4">
+    <button class="btn btn-close float-end" (click)="toggleMobileMenu()"></button>
+    <ul class="list-unstyled mt-5">
+      <li class="nav-item mb-3">
+        <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-house-door-fill"></i> Home
+        </a>
+      </li>
+      <li class="nav-item mb-3">
+        <a class="nav-link d-flex align-items-center gap-2" routerLink="/about" routerLinkActive="active" >
+          <i class="bi bi-info-circle-fill"></i> About
+        </a>
+      </li>
+      <li class="nav-item mb-3">
+        <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-briefcase-fill"></i> Services
+        </a>
+      </li>
+      <li class="nav-item mb-3">
+        <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-box-seam"></i> Products
+        </a>
+      </li>
+      <li class="nav-item mb-4">
+        <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <i class="bi bi-telephone-fill"></i> Contact
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-success rounded-pill w-100 d-flex align-items-center justify-content-center gap-2" href="#">
+          <i class="bi bi-whatsapp"></i> +91 XXXXX XXXXX
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

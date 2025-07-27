@@ -1,0 +1,26 @@
+.footer-section {
+  background-color: #000;
+  padding: 2rem 1rem;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 1.3rem;
+}
+
+.footer-icon {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #0147AB;
+}
