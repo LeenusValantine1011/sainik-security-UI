@@ -1,0 +1,119 @@
+.product-details-hero {
+    padding: 40px 0;
+    background: radial-gradient(circle at left, rgba(0, 102, 204, 0.1) 0%, transparent 60%);
+  }
+  
+  .hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .hero-text h1 .bold {
+    display: block;
+  }
+  
+  .subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0 20px;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25d366;
+    padding: 12px 30px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .whatsapp-btn:hover {
+    background: #20b358;
+  }
+  
+  .whatsapp-btn img {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin-left: auto;
+  }
+  
+  /* Overview */
+  .overview-section {
+    background: #e7f0f9;
+    padding: 40px 20px;
+    margin: auto;
+  }
+  
+  .overview-title {
+    font-weight: 600;
+    font-size: 24px;
+    margin: auto;
+    
+  }
+  
+  .overview-text {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  /* Highlights */
+  .highlights-section {
+    background: #0052cc;
+    color: white;
+    padding: 50px 20px;
+  }
+  
+  .highlights-title {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  .highlights-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .highlights-list li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #0a1f44;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: color 0.2s ease;
+  }
+  
+  .back-button:hover {
+    color: #007bff;
+  }
+  
+  .back-button i {
+    font-size: 18px;
+  }
+  

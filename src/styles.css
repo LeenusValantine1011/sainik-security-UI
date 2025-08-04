@@ -1,9 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-    overflow-x: hidden;
-  }
+
   
   html {
     overflow-x: hidden;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent !important; /* ensure transparent background */
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px; /* adjust size */
+    height: 400px;
+    background: url("src/assets/about-us/cctv logo 3.svg") no-repeat center center;
+    background-size: contain;
+    opacity: 0.05; /* visibility */
+    transform: translate(-50%, -50%);
+    z-index: 0; /* behind content */
+    pointer-events: none; /* don't block clicks */
+  }
+  
+  app-root {
+    position: relative;
+    z-index: 1; /* keep content above watermark */
+  }
+  main {
+    flex: 1; /* push footer down */
   }
   

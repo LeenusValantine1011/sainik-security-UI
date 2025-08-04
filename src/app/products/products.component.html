@@ -1,94 +1,36 @@
-<div class="container">
-    <h1 class="hero-heading mb-3">
-      Electronic Security <br />
-      & Safety Product Line
-    </h1>
-    <p class="hero-subheading mx-auto">
-      We provide technology-powered safety and automation systems designed to protect, control, and monitor access across all types of properties. Our solutions are integrated, reliable, and easy to maintain.
+<body>
+<div class="products-page">
+  
+  <!-- Heading -->
+  <div class="products-header text-center">
+    <h1>Electronic Security<br />& Safety Product Line</h1>
+    <p>
+      We provide technology-powered safety and automation systems designed to protect, control,
+      and monitor access across all types of properties. Our solutions are integrated, reliable,
+      and easy to maintain.
     </p>
-
-    <div class="products-section py-3 ">
-        <div class="row align-items-center flex-column flex-md-row product-card-1">
-          
-          <!-- Text Content -->
-          <div class="col-md-6 text-center text-md-start mb-4 mb-md-0 ">
-            <h5 class="product-title fw-semibold mb-3">
-              CCTV Surveillance Systems
-            </h5>
-            <ul class="product-features ps-3 mb-3 text-start">
-              <li>IP & Analog Cameras (Indoor/Outdoor)</li>
-              <li>Dome, Bullet, and PTZ Cameras</li>
-              <li>ANPR (Automatic Number Plate Recognition)</li>
-              <li>AI Motion Detection</li>
-              <li>Remote Viewing via Mobile App or VMS</li>
-            </ul>
-            <p class="product-brands mb-0">
-              <strong>Brands :</strong> Hikvision, Trassir, CP Plus, Flir, Bosch, Dahua, Honeywell, etc
-            </p>
-          </div>
-      
-          <!-- Image -->
-          <div class="col-md-6 text-center">
-            <img src="assets/products/pngwing.com 1.svg" alt="CCTV Cameras" class="img-fluid product-img" />
-          </div>
-      
-        </div>
-      </div>
-    <div class="products-section py-3 ">
-        <div class="row align-items-center flex-column flex-md-row product-card-1">
-          
-          <!-- Text Content -->
-          <div class="col-md-6 text-center text-md-start mb-4 mb-md-0 ">
-            <h5 class="product-title fw-semibold mb-3">
-              CCTV Surveillance Systems
-            </h5>
-            <ul class="product-features ps-3 mb-3 text-start">
-              <li>IP & Analog Cameras (Indoor/Outdoor)</li>
-              <li>Dome, Bullet, and PTZ Cameras</li>
-              <li>ANPR (Automatic Number Plate Recognition)</li>
-              <li>AI Motion Detection</li>
-              <li>Remote Viewing via Mobile App or VMS</li>
-            </ul>
-            <p class="product-brands mb-0">
-              <strong>Brands :</strong> Hikvision, Trassir, CP Plus, Flir, Bosch, Dahua, Honeywell, etc
-            </p>
-          </div>
-      
-          <!-- Image -->
-          <div class="col-md-6 text-center">
-            <img src="assets/products/pngwing.com 1.svg" alt="CCTV Cameras" class="img-fluid product-img" />
-          </div>
-      
-        </div>
-      </div>
-    <div class="products-section py-3 ">
-        <div class="row align-items-center flex-column flex-md-row product-card-1">
-          
-          <!-- Text Content -->
-          <div class="col-md-6 text-center text-md-start mb-4 mb-md-0 ">
-            <h5 class="product-title fw-semibold mb-3">
-              CCTV Surveillance Systems
-            </h5>
-            <ul class="product-features ps-3 mb-3 text-start">
-              <li>IP & Analog Cameras (Indoor/Outdoor)</li>
-              <li>Dome, Bullet, and PTZ Cameras</li>
-              <li>ANPR (Automatic Number Plate Recognition)</li>
-              <li>AI Motion Detection</li>
-              <li>Remote Viewing via Mobile App or VMS</li>
-            </ul>
-            <p class="product-brands mb-0">
-              <strong>Brands :</strong> Hikvision, Trassir, CP Plus, Flir, Bosch, Dahua, Honeywell, etc
-            </p>
-          </div>
-      
-          <!-- Image -->
-          <div class="col-md-6 text-center">
-            <img src="assets/products/pngwing.com 1.svg" alt="CCTV Cameras" class="img-fluid product-img" />
-          </div>
-      
-        </div>
-      </div>
-
-
-      
   </div>
+
+  <!-- Products Grid -->
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-md-6 col-lg-6 col-xl-6"
+        *ngFor="let product of products"
+      >
+        <div class="product-card">
+          <img [src]="product.image" [alt]="product.name" class="product-image" />
+          <h5>{{ product.name }}</h5>
+          <a
+            [routerLink]="['/product', product.id]"
+            class="know-more-btn"
+          >
+            Know more →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<app-contact-page></app-contact-page>

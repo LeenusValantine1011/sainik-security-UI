@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ServicespageComponent } from './servicespage/servicespage.component';
 import { ProductsComponent } from './products/products.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { ProductsComponent } from './products/products.component';
     NavbarComponent,
     ServicespageComponent,
     ProductsComponent,
+    ContactUsComponent,
+    ProductDetailsComponent,
 
   ],
   imports: [

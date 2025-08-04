@@ -248,7 +248,7 @@
   
   /*Clients*/
   .clientele-section {
-    background-color: #f5f5f5;
+
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
@@ -261,7 +261,7 @@
   }
   
   .client-logo-wrapper {
-    background-color: #fff;
+
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
