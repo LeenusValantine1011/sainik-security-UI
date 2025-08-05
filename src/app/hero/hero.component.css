@@ -12,7 +12,9 @@
     line-height: 1.2;
     margin-left: 40px !important;
     color: #000;
+    font-family: 'Prosto One', sans-serif;
   }
+
   
   .hero-subtext {
     max-width: 500px;
@@ -54,6 +56,7 @@
     line-height: 1;
     margin-left: 40px !important;
     margin-top: 0px;
+    font-family: 'Prosto One', sans-serif;
   }
   
   .about-subheading {
@@ -91,6 +94,7 @@
     .about-description {
       margin-left: 0 !important;
       text-align: left;
+
     }
   }
   
@@ -111,6 +115,7 @@
     font-size: 1.1rem;
     gap: 7rem;
     padding: 0 1rem;
+    font-family: 'Prosto One', sans-serif;
   }
   
   .usp-item {
@@ -171,6 +176,7 @@
   
   .section-title {
     font-size: 2.25rem;
+    font-family: 'Prosto One', sans-serif;
   }
   
   .section-subtitle {
@@ -258,6 +264,7 @@
     font-weight: 600;
     color: #111;
     margin-bottom: 2rem;
+    font-family: 'Prosto One', sans-serif;
   }
   
   .client-logo-wrapper {

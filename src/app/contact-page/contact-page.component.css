@@ -1,13 +1,23 @@
 .contact-section {
-  background-image: url('src/assets/background/Frame.png');
-  padding: 2.5rem 1rem;
-  margin-bottom: 0px;
+  background: linear-gradient(180deg, #0056b3 0%, #007bff 100%);
   background-size: cover;
+  background-position: center;
+  padding: 2.5rem 1rem;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-title {
   font-size: 2rem;
   font-weight: 600;
+  font-family: 'Prosto One', sans-serif;
 }
 
 .contact-description {
@@ -15,6 +25,7 @@
   font-size: 1rem;
   line-height: 1.7;
   color: #e8f0ff;
+  margin-bottom: 1.5rem; /* Ensure space before button */
 }
 
 .contact-btn {
@@ -26,20 +37,57 @@
   color: #000;
   text-transform: uppercase;
   transition: all 0.3s ease;
+  font-family: 'Prosto One', sans-serif;
 }
 
 .contact-btn:hover {
   opacity: 0.9;
   transform: scale(1.03);
 }
+.contact-section {
+  padding: 2.5rem 1rem;
+}
 
-/* Keep design consistent across all screen sizes */
+/* Mobile-Only Contact Us Styling */
 @media (max-width: 768px) {
+  .contact-section {
+    background: linear-gradient(180deg, #0056b3 0%, #007bff 100%);
+    padding: 3rem 1.5rem; /* Enough padding for top and bottom */
+    text-align: center;
+    color: white;
+    border-radius: 0;
+  }
+
   .contact-title {
     font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+    font-family: 'Prosto One', sans-serif;
   }
 
   .contact-description {
     font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #8EC5FC 0%, #E0C3FC 100%);
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .contact-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
   }
 }
+

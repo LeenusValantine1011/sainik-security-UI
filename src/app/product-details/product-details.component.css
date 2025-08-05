@@ -7,6 +7,7 @@
     font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
+    font-family: 'Prosto One', sans-serif;
   }
   
   .hero-text h1 .bold {
@@ -66,6 +67,7 @@
   .overview-title {
     font-weight: 600;
     font-size: 24px;
+    font-family: 'Prosto One', sans-serif;
     margin: auto;
     
   }
@@ -85,6 +87,7 @@
   .highlights-title {
     font-size: 36px;
     font-weight: 700;
+    font-family: 'Prosto One', sans-serif;
   }
   
   .highlights-list ul {
@@ -95,6 +98,7 @@
   .highlights-list li {
     font-size: 16px;
     margin-bottom: 10px;
+
   }
   
   .back-button {

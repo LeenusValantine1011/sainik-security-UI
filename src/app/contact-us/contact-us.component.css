@@ -5,6 +5,7 @@
   .form-heading {
     font-size: 1.8rem;
     color: #000;
+    font-family: 'Prosto One', sans-serif;
   }
   
   .form-label {
@@ -30,6 +31,7 @@
     padding: 10px;
     font-size: 1rem;
     border-radius: 6px;
+    font-family: 'Prosto One', sans-serif;
   }
   
   .btn-primary:hover {
