@@ -1,50 +1,54 @@
 <div class="contact-container container py-5">
-    <div class="row align-items-center">
-      <!-- Left: Contact Form -->
-      <div class="col-md-6 ml-5 ">
-        <h2 class="form-heading mb-4 fw-bold">
-          Secure Your Space,<br />Contact Us Today
-        </h2>
-  
-        <form class="">
-          <div class="row mb-3">
-            <div class="col">
-              <label for="firstName" class="form-label">First name</label>
-              <input type="text" id="firstName" class="form-control"  />
-            </div>
-            <div class="col">
-              <label for="lastName" class="form-label">Last name</label>
-              <input type="text" id="lastName" class="form-control"  />
-            </div>
+  <div class="row align-items-center">
+    <!-- Left: Contact Form -->
+    <div class="col-md-6 ml-5 ">
+      <h2 class="form-heading mb-4 fw-bold">
+        Secure Your Space,<br />Contact Us Today
+      </h2>
+
+      <form (submit)="sendEmail($event)" autocomplete="on" novalidate>
+        <div class="row mb-3">
+          <div class="col">
+            <label for="firstName" class="form-label">First name</label>
+            <!-- NAME must match EmailJS template variable, e.g. from_firstname -->
+            <input type="text" id="firstName" name="from_firstname" class="form-control" required />
           </div>
-  
-          <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" id="email" class="form-control"  />
+          <div class="col">
+            <label for="lastName" class="form-label">Last name</label>
+            <input type="text" id="lastName" name="from_lastname" class="form-control" required />
           </div>
-  
-          <div class="mb-3">
-            <label for="mobile" class="form-label">Mobile number</label>
-            <input type="tel" id="mobile" class="form-control"  />
-          </div>
-  
-          <div class="mb-4">
-            <label for="message" class="form-label">Your message</label>
-            <textarea id="message" rows="5" class="form-control" placeholder="Enter your question or message"></textarea>
-          </div>
-  
-          <button type="submit" class="btn btn-primary w-100">Submit</button>
-        </form>
-      </div>
-  
-      <!-- Right: Logo/Image -->
-      <div class="col-md-6 text-center d-none d-md-block">
-        <img
-          src="assets/about-us/cctv logo 4.svg"
-          alt="Sainic Security Logo"
-          class="img-fluid contact-logo"
-        />
-      </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" id="email" name="from_email" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="mobile" class="form-label">Mobile number</label>
+          <input type="tel" id="mobile" name="from_mobile" class="form-control" />
+        </div>
+
+        <div class="mb-4">
+          <label for="message" class="form-label">Your message</label>
+          <textarea id="message" rows="5" name="message" class="form-control"
+            placeholder="Enter your question or message"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100" [disabled]="isLoading">
+          <span *ngIf="!isLoading">Submit</span>
+          <span *ngIf="isLoading">Sending…</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- Right: Logo/Image -->
+    <div class="col-md-6 text-center d-none d-md-block">
+      <img
+        src="assets/about-us/cctv logo 4.svg"
+        alt="Sainic Security Logo"
+        class="img-fluid contact-logo"
+      />
     </div>
   </div>
-  
+</div>

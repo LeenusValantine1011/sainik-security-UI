@@ -12,6 +12,7 @@ import { ServicespageComponent } from './servicespage/servicespage.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { FormsModule } from '@angular/forms'; 
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

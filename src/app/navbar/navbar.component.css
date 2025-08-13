@@ -2,6 +2,13 @@
     height: 100px;
   }
   
+  
+  .logo-text{
+    font-weight: 600;
+    color: #000000;
+    font-family: 'Prosto One', sans-serif;
+  }
+  
   .mobile-menu {
     position: fixed;
     top: 0;

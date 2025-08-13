@@ -1,10 +1,30 @@
-  
-  
-  
-  .hero-about-wrapper {
-    font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at left, rgba(173, 216, 230, 0.2), transparent 60%);
-  }
+.hero-about-wrapper {
+  position: relative; /* anchor the watermark */
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at left, rgba(173, 216, 230, 0.2), transparent 60%);
+  overflow: hidden; /* ensures watermark doesn't spill out */
+}
+
+.hero-about-wrapper::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px; /* adjust size */
+  height: 400px;
+  background: url("src/assets/about-us/cctv logo 3.svg") no-repeat center center;
+  background-size: contain;
+  opacity: 0.10; /* visibility */
+  transform: translate(-50%, -50%);
+  z-index: 0; /* behind content */
+  pointer-events: none; /* don't block clicks */
+}
+
+.hero-about-wrapper > * {
+  position: relative;
+  z-index: 1; /* ensures text is above watermark */
+}
+
   
   .hero-heading {
     font-size: 2.75rem;
@@ -254,46 +274,67 @@
   
   /*Clients*/
   .clientele-section {
-
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 60px 0;
   }
   
   .clientele-title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: #111;
-    margin-bottom: 2rem;
-    font-family: 'Prosto One', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  .clientele-title::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background: #28a745; /* green accent */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-radius: 2px;
   }
   
   .client-logo-wrapper {
-
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
   
   .client-logo-wrapper:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   }
   
   .client-logo {
-    width: 100%;
-    max-width: 80px;
-    height: auto;
+    max-height: 60px;
+    object-fit: contain;
+    transition: filter 0.3s ease, transform 0.3s ease;
   }
   
-  /* Gutter override for tighter layout */
-  @media (min-width: 768px) {
-    .row.gx-2 {
-      --bs-gutter-x: 0.5rem;
-    }
+  .client-logo-wrapper:hover .client-logo {
+    transform: scale(1.05);
+  }
   
-    .row.gy-3 {
-      --bs-gutter-y: 0.75rem;
+  /* Responsive tweaks */
+  @media (max-width: 576px) {
+    .clientele-title {
+      font-size: 1.5rem;
+    }
+    .client-logo {
+      max-height: 50px;
     }
   }
   
   /*Contact*/
+  
   
