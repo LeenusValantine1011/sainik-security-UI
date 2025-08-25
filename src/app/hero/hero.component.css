@@ -1,29 +1,3 @@
-.hero-about-wrapper {
-  position: relative; /* anchor the watermark */
-  font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at left, rgba(173, 216, 230, 0.2), transparent 60%);
-  overflow: hidden; /* ensures watermark doesn't spill out */
-}
-
-.hero-about-wrapper::before {
-  content: "";
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 400px; /* adjust size */
-  height: 400px;
-  background: url("src/assets/about-us/cctv logo 3.svg") no-repeat center center;
-  background-size: contain;
-  opacity: 0.10; /* visibility */
-  transform: translate(-50%, -50%);
-  z-index: 0; /* behind content */
-  pointer-events: none; /* don't block clicks */
-}
-
-.hero-about-wrapper > * {
-  position: relative;
-  z-index: 1; /* ensures text is above watermark */
-}
 
   
   .hero-heading {
